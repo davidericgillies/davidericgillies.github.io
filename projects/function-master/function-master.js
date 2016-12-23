@@ -90,12 +90,59 @@ function isFriend(name, obj) {
     }
 }
 
-function nonFriends(name, list) {
-    var data;
-    var arr = [];
-        for (var i = 0; i < data.length; i++) {
-            if (data[i].name !== name) {
-                arr.push(data[i].name);
+function nonFriends(name, people) {
+    let arrName = [];
+    let arrFriends;
+        for (let i = 0; i < people.length; i++) {
+            if (people[i].name !== name) {
+                arrName.push(people[i].name);
+            } else if (people[i].name === name){
+                arrFriends = (people[i].friends);
             }
         }
+        for (let i = 0; i<arrFriends.length; i++) {
+             let arrlen = arrName.length;
+            for (let j = 0; j<arrlen; j++) {
+                if (arrFriends[i] == arrName[j]) {
+                    arrName = arrName.slice(0, j).concat(arrName.slice(j+1, arrlen));
+                }
+            }
+        }
+  return arrName;
+//   console.log(arrName);
+//   console.log(arrFriends);
+}
+
+function updateObject(obj, key, val) {
+  for (var prop in obj) {
+    if (!!obj[key]){
+      obj[key] = val;
+    } else {
+      obj[key] = val;
+    }
+  }
+  return obj;
+}
+
+function removeProperties(obj, arr) {
+  for (let i = 0; i<arr.length; i++) {
+    for (var key in obj) {
+      if (arr[i] === key) {
+        delete obj[key];
+      }
+    }
+  }
+  return obj;
+}
+
+function dedup(arr){
+  let finalArr = [];
+  let obj = {};
+  for (let i = 0; i<arr.length; i++) {
+    obj[arr[i]]=arr[i];
+  }
+  for (let key in obj){
+    finalArr.push(obj[key]);
+  }
+  return finalArr;
 }

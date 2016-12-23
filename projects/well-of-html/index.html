@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/notes/notes.js"></script>
+    <title>A Well of HTML</title>
+    <style type="text/css">
+        .my-form {
+    /* Just to center the form on the page, use: margin: 0 auto;*/
+    margin: 20px;
+    width: 400px;
+    /* To see the outline of the form */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+.example-form div + div {
+    margin-top: 1em;
+}
+
+.example-form label {
+    /* To make sure that all labels have the same size and are properly aligned */
+    display: inline-block;
+    width: 90px;
+}
+
+.example-form input,
+.example-form textarea {
+    /* To make sure that all text fields have the same font settings
+    By default, textareas have a monospace font */
+    font: 1em sans-serif;
+    /* To give the same size to all text field */
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /* To harmonize the look & feel of text field border */
+    border: 1px solid #999;
+}
+
+.example-form input:focus,
+.example-form textarea:focus {
+    /* To give a little highlight on active elements */
+    border-color: #000;
+}
+
+.example-form textarea {
+    /* To properly align multiline text fields with their labels */
+    vertical-align: top;
+    /* To give enough room to type some text */
+    height: 5em;
+    /* To allow users to resize any textarea vertically
+    It does not work on every browsers */
+    resize: vertical;
+}
+
+table {
+    margin: 20px;
+}
+
+table,
+th,
+td {
+    padding: 4px;
+    border: 1px solid black;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 4px;
+}
+
+.example-grid {
+    margin: 20px;
+}
+
+.row-img {
+    margin: 4px;
+}
+        
+    </style>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <!-- ALL YOUR MARKUP GOES BELOW HERE -->
+        <a href="https://en.wikipedia.org/wiki/Oregon">Oregon</a>
+            <img src="img/cherries.jpg" />
+                <h1>Art Glass <small>An <b>AMAZING</b> marterial</small></h1>
+                    <p>Glass is an extramly versitle material. Glass artists work with glass using various methods from melting it in a kiln, to blowing it into elaborate forms, and grinding and polishing the solid form.</p>
+                <h2>Photography <small>The art of <em>light</em></small></h2>
+                    <p>Photography is one of the only art forms that allows us to capture moments in by capturing light.</p>
+                <h3>Mt. Hood <small>The best Mt.</small></h3>
+                    <p>Mt. Hood is <strong>amazing</strong>!Every year tons of professional snowboarders and skiers from around the world make a trip to Oregon to experience and train on Mt. Hood.</p>
+                <h4>Oregon <small>The best place on earth</small></h4>
+                    <p>Oregon is one of the most gorgeous states in the USA.</p>
+                <h5>New Orleans <small>One Funky City</small></h5>
+                    <p>Freedom and <i>culture</i> are two very distictive qualities of the mysterious and wonderful city of New Orleans</p>
+                <h6>The Delachaise <small>Time to wine and dine</small></h6>
+                    <p>If you love wine and fries this is the place for you.</p>
+        <ul>
+            <li>silica</li>
+            <li>soda ash</li>
+            <li>heat</li>
+            <li>lime</li>
+        </ul>
+        <ol>
+            <li>Portland</li>
+                <div>AKA Stumptown, P-Town, Bridge City</div>
+            <li>Lee Falls</li>
+                <div>The Best secret spot</div>
+            <li>Canon Beach</li>
+                <div>Home of the Goonies rock!</div>
+            <li>Willamette valley</li>
+                <div>Time to drink some world class wine</div>
+        </ol>
+        <form class="my-form">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" />
+            </div>
+            <div>
+                <label for="mail">E-mail:</label>
+                <input type="email" id="mail" />
+            </div>
+            <div>
+                <label for="msg">Message:</label>
+                <textarea id="msg"></textarea>
+            </div>
+
+            <div class="button">
+                <button type="submit">Send your message</button>
+            </div>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Place</th>
+                    <th>Activities</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Best spots to visit in Oregon</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>Mt. Hood</td>
+                    <td>Snowboarding, Sking, Tubbing, Drinking Hot Coco</td>
+                </tr>
+                <tr>
+                    <td>Crater Lake</td>
+                    <td>Hiking & Swimming</td>
+                </tr>
+                <tr>
+                    <td>Bagby Hot Springs</td>
+                    <td>Soaking in hollowed out logs</td>
+                </tr>
+                <tr>
+                    <td>Canon Beach</td>
+                    <td>Surfing, skimboarding, camping</td>
+                </tr>
+                <tr>
+                    <td>Columbia River</td>
+                    <td>Wind Surfing</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="flex-row">
+            <div>One</div>
+            <div>Two</div>
+            <div>Three</div>
+            <div>Four</div>
+            <div>Five</div>
+        </div>
+        
+        <div class="example-grid">
+          <div class="row">
+              <div class="col-md-2"><img src="img/cherries.jpg" class="row-img"></img>
+              </div>
+              <div class="col-md-10">Cherries are delicious and nutritious! You can eat them and feel good about yourself!</div>
+          </div>
+          <div class="row">
+              <div class="col-md-2"><img src="img/black-currant.jpg" class="row-img"></img>
+              </div>
+              <div class="col-md-10">Black Currents are delicious and nutritious! You can eat them and feel good about yourself!</div>
+          </div>
+          <div class="row">
+              <div class="col-md-2"><img src="img/apple-in-grass.jpg" class="row-img"></img>
+              </div>
+              <div class="col-md-10">Apples are delicious and nutritious! You can eat them and feel good about yourself!</div>
+          </div>
+        </div>
+        
+        
+        <!-- ALL YOUR MARKUP GOES ABOVE HERE -->
+    </div>
+    <script>
+        $(function () {
+            window.opspark.notes.show();
+        });
+    </script>
+</body>
+
+</html>
